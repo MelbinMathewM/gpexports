@@ -1,0 +1,58 @@
+{% extends 'user_base.html' %}
+
+
+{% block body %}
+
+
+
+  <!-- about section -->
+
+ 
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="img_container">
+            <div class="img-box">
+              <img src="static/images/who.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="detail-box">
+            <div class="heading_container ">
+              <h2>
+                Who Are We?
+              </h2>
+            </div>
+            <p>
+              Our mission is to empower businesses by providing top-tier
+               export solutions that drive growth and open new markets.
+                We strive to be the partner of choice for companies looking to expand their reach
+                 and achieve international success.
+            </p>
+            <div class="btn-box">
+              <a href="{% url 'service' %}">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+    
+
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+  <script src="static/js/custom.js"></script>
+</body>
+
+</html>
+
+
+
+
+{% endblock %}

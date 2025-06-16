@@ -1,0 +1,103 @@
+{% extends 'user_base.html' %}
+
+
+{% block body %}
+<style>
+    .card-container {
+  display: flex;
+padding-bottom: 30px;
+  padding-left: 100px;
+  flex-wrap: wrap; /* To handle wrapping on smaller screens */
+}
+
+.card {
+  width: 350px;
+  margin: 20px; /* Adjust spacing between cards */
+}
+
+.card-img-top {
+  width: 100%; /* Ensure image fits the card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+  padding: 1rem; /* Adjust padding inside the card body */
+}
+
+.btn {
+  margin-top: 1rem; /* Space between text and button */
+}
+.card-title{
+    font-weight: bold;
+}
+
+h1 {
+    padding: 40px;
+    text-decoration: underline;
+    color: white; 
+    font-size: 70px;
+    font-weight: bolder; 
+    text-align: center;
+    height: auto; 
+    transition: color 0.3s ease, text-decoration 0.3s ease, height 0.3s ease; 
+}
+
+
+h1 {
+   
+    color: white;
+    cursor: pointer;
+    background-image: url('https://images.freeimages.com/images/large-previews/6e7/spices-dryfruits-1322627.jpg');
+     background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    text-decoration: none;
+    background-clip: text; 
+}
+.color{
+    background-color: white;
+    margin-top: 50px;
+}
+
+</style>
+<div class="color">
+
+
+<h1>OUR SERVICES</h1>
+<div class="card-container">
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.BunBa3OuNZSih_gKCizMSAHaEo?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Fresh Vegitables Export</h5>
+        <p class="card-text"> We source our vegetables from the best farms, ensuring that only the 
+            freshest and highest-quality produce reaches our clients.
+            Our efficient logistics and distribution network
+             enable us to deliver fresh vegetables to various international destinations on time.</p>
+        
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="static/images/fruits.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Our Premium Fruit Offerings</h5>
+        <p class="card-text">We handpick fruits at their peak ripeness to ensure 
+            they are bursting with flavor, nutrients, and freshness.
+            We prioritize eco-friendly farming methods and packaging solutions to support environmental sustainability.</p>
+        
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="static/images/spices.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Discover Our Top-Quality Spice Collection</h5>
+        <p class="card-text">Explore our range and discover the perfect spices to add depth and character to every meal. Taste the difference that top-quality spices can make, and let us help you turn every dish into a culinary masterpiece.
+
+        </p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
