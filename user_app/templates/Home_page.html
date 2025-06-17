@@ -13,7 +13,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="static/images/logogp1.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>GP Exports</title>
@@ -60,6 +60,22 @@
       color: white;
       
     }
+    .detail_box{
+      gap: 10px;
+      {% comment %} margin-top: 15px; {% endcomment %}
+    }
+    .detail_box_data{
+      gap:3px;
+    }
+    .header-first{
+      gap:10px;
+      align-items: center;
+    }
+    .header-first-img{
+      background-color: white;
+      padding: 5px;
+      border-radius: 10%;
+    }
     .call{
      position: relative;
      top: 50px;
@@ -98,85 +114,71 @@ i:hover {
 </head>
 
 <body>
- <style>
-
- </style>
- 
-</html>
   <div class="hero_area">
     <!-- header section strats -->
-    <div class="hero_bg_box">
-      <div class="img-box">
-        <img src="static/images/george_pic.png" width="100%" alt="">
-      </div>
-    </div>
-
+    
     <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="" >
-              
-            </a>
-            <a href="" class="contact_link2">
-              
-              <span class="call">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                Call : +01 1234567890
-              </span>
-            </a>
-            <a href="" class="contact_link3">
-              
-              <span class="email">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-               GPEXPORTS@gmail.com
-              </span>
-            </a>
-          </div>
+      <!-- Hero Image -->
+      <div class="hero_bg_box">
+        <div class="img-box">
+          <img src="static/images/cargoship.jpg" class="img-fluid w-100" style="object-fit: cover; height: auto; max-height: 400px;" alt="Hero Image">
         </div>
       </div>
-      <a style="float: inline-end; padding-right: 25px;" href="">
-       
-        <span style="color: white;" class="call2">
-          <i class="fa fa-map-marker" style="color: yellow;" aria-hidden="true"></i>
-          Cherupuzha
-        </span>
-      </a>
-     <!-- <img class="image_" src="static/images/gptran.png"  alt="NO DISPLAY"> -->
-     <span style="padding-left: 110px; " class="gp">GP EXPORTS</span>
-     <i class="fas fa-arrow-up-right-dots" id="export"></i>
-      <hr>
-      <div class="header_bottom">
-      
-        <div class="container-fluid">
-          
-        
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
-           
-              
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
-            </button>
 
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav  ">
+      <!-- Top Contact and Heading Section -->
+      <div class="container-fluid py-3">
+  <div class="main-header d-flex justify-content-between align-items-start flex-nowrap text-white flex-wrap-md-nowrap">
+    
+    <!-- Logo and Heading (Right) -->
+    <div class="header-first d-flex gap-2 mt-3 mt-md-0">
+      <img class="header-first-img" src="static/images/logogp11.png" width="65px" alt="Logo">
+      <span class="gp text-white fw-bold d-none d-md-inline" style="font-size: 1.8rem;"> &nbsp;GP EXPORTS</span>
+    </div>
+
+
+    <!-- Contact Details (Left - responsive stacking) -->
+    <div class="detail_box d-flex flex-column flex-md-row mt-0 mt-md-3">
+      <a href="#" class="detail_box_data text-white text-decoration-none small d-flex align-items-center">
+        <i class="fa fa-phone me-2" aria-hidden="true"></i> +91 85903 83041
+      </a>
+      <a href="#" class="detail_box_data text-white text-decoration-none small d-flex align-items-center">
+        <i class="fa fa-envelope me-2" aria-hidden="true"></i> gpexports05@gmail.com
+      </a>
+      <a href="#" class="detail_box_data text-white text-decoration-none small d-flex align-items-center">
+        <i class="fa fa-map-marker me-2" aria-hidden="true"></i> Cherupuzha
+      </a>
+    </div>
+
+  </div>
+</div>
+
+      <hr class="m-0" />
+
+      <!-- Navigation Bar -->
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand text-white d-lg-none" href="{% url 'Home_page' %}">GP EXPORTS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav text-uppercase">
                 <li class="nav-item active">
-                  <a  class="nav-link" href="{% url 'Home_page' %}">Home <span class="sr-only"></span></a>
+                  <a class="nav-link" style="font-weight: 600;" href="{% url 'Home_page' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'about' %}"> About</a>
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'service' %}"> Services </a>
+                  <a class="nav-link" href="{% url 'service' %}">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'gallery' %}"> Gallery </a>
+                  <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
                 </li>
-           
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'contact_us' %}">Contact us</a>
+                  <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -184,106 +186,77 @@ i:hover {
         </div>
       </div>
     </header>
+
+
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section ">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Your Saftey <br>
-                      <span>
-                        Our Responsibility
-                      </span>
-                    </h1>
-                    <p>
-                      Bringing Farm-Fresh Excellence to Global Markets.
-                    </p>
-                    <div class="btn-box">
-                      <a href="{% url 'contact_us' %}" class="btn-1"> Contact As </a>
-                      <a href="#quote" class="btn-2">Get A Quote</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-13">
-                  <div class="detail-box">
-                    <h1>
-                      Why Safety and   <br>
-                      <span>
-                        Responsibility Matter
-                      </span>
-                    </h1>
-                    <p>
-                      In an industry where trust and reliability are key, 
-                      our focus on safety and responsibility not only safeguards your
-                       interests but also enhances our 
-                      reputation as a dependable partner in global trade. We believe 
-                      that by prioritizing these values, we contribute to a more secure and 
-                      ethical business environment for everyone involved..
-                    </p>
-                  
-                    <div class="btn-box">
-                      <a href="{% url 'contact_us' %}" class="btn-1"> Contact As </a>
-                      <a href="#quote" class="btn-2">Get A Quote</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-15">
-                  <div class="detail-box">
-                    <h1>
-                      <br>
-                      <span>
-                        Why Choose Us? 
-                      </span>
-                    </h1>
-                    <p>
-                      Our dedication to safety and responsibility not only safeguards your goods but also 
-                      enhances the reliability and efficiency of our services.
-                       We strive to be more than just an export partner;
-                        we aim to be a trusted ally in your global business endeavors.
+    <section class="slider_section">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+    
+    <ol class="carousel-indicators p-5">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
 
-                      By choosing GP EXPORTS, you are partnering with a company that values integrity,
-                       quality, and ethical conduct as much as you do.
-                        
-                    </p>
-                    <div class="btn-box">
-                      <a href="{% url 'contact_us' %}" class="btn-1"> Contact As </a>
-                      <a href="#quote" class="btn-2">Get A Quote</a>
-                    </div>
-                  </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="detail-box">
+                <h1>Your Safety <br><span>Our Responsibility</span></h1>
+                <p>Bringing Farm-Fresh Excellence to Global Markets.</p>
+                <div class="btn-box">
+                  <a href="{% url 'contact_us' %}" class="btn-1">Contact Us</a>
+                  <a href="#quote" class="btn-2">Get A Quote</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="detail-box">
+                <h1>Why Safety and <br><span>Responsibility Matter</span></h1>
+                <p>In an industry where trust and reliability are key...</p>
+                <div class="btn-box">
+                  <a href="{% url 'contact_us' %}" class="btn-1">Contact Us</a>
+                  <a href="#quote" class="btn-2">Get A Quote</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="container idicator_container">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="detail-box">
+                <h1><br><span>Why Choose Us?</span></h1>
+                <p>Our dedication to safety and responsibility not only safeguards your goods...</p>
+                <div class="btn-box">
+                  <a href="{% url 'contact_us' %}" class="btn-1">Contact Us</a>
+                  <a href="#quote" class="btn-2">Get A Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
     <!-- end slider section -->
   </div>
 
@@ -588,44 +561,6 @@ i:hover {
         <p>
           Employees or contractors involved in the export operations, including sales, logistics, compliance, and customer service.
         </p>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 mx-auto ">
-          <div class="box">
-            <div class="img-box">
-              <img src="static/images/george.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                George Prince
-              </h5>
-              <h6 class="">
-                Managing Directer
-              </h6>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-4 col-sm-6 mx-auto ">
-          <div class="box">
-            <div class="img-box">
-              <img height="470px" src="static/images/abhi.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-               Abhijith PB
-              </h5>
-              <h6 class="">
-                Sales Manager
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="{% url 'error' %}">
-          View All
-        </a>
       </div>
     </div>
   </section>
