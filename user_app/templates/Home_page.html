@@ -13,7 +13,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="static/images/logogp1.png" type="image/x-icon">
+  <link rel="shortcut icon" href="static/images/logogp11.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>GP Exports</title>
@@ -107,7 +107,26 @@ i:hover {
     cursor: pointer; 
 }
 
-  
+  .btn-box button {
+    position: relative;
+  }
+
+  .spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    border-top: 2px solid #333;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
   </style>
 </head>
@@ -190,7 +209,7 @@ i:hover {
     <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
     
     <ol class="carousel-indicators p-5">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -371,37 +390,6 @@ i:hover {
           c10.095-0.01,18.276-8.191,18.286-18.286V283.429C475.419,273.334,467.238,265.153,457.143,265.143z" />
                     </g>
                   </g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
               </svg>
             </div>
             <div class="detail-box">
@@ -444,37 +432,6 @@ i:hover {
                  c-8.262,0-15-6.724-15-15v-15h40.346c10.411,17.847,29.55,30,51.654,30c10.668,0,20.552-3.032,29.238-7.934
                  C359.352,229.501,347.186,257.357,326.316,275.706z" />
                   </g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
               </svg>
             </div>
             <div class="detail-box">
@@ -503,10 +460,7 @@ i:hover {
 
   <section class="contact_section layout_padding">
     <div class="contact_bg_box">
-      <div class="image-container">
-        <img src="static/images/2314950.jpg" class="styled-image" width="100%" alt="">
-    </div>
-    
+        <img src="static/images/2314950.jpg" class="img-fluid" style="object-fit:fill; height: 100%; width: 100%;" alt="Form Image">
     </div>
     <div class="container">
       <div class="heading_container heading_center">
@@ -517,7 +471,7 @@ i:hover {
       <div class="">
         <div class="row" id="quote">
           <div class="col-md-7 mx-auto">
-            <form action="" method="post">
+            <form action="{% url 'Home_page' %}" method="POST" onsubmit="return handleFormSubmit(this)">
               {% csrf_token %}
               <div class="contact_form-container">
                 <div>
@@ -534,8 +488,9 @@ i:hover {
                     <input type="text" name="message" required placeholder="Enquiry/Message" class="message_input" />
                   </div>
                   <div class="btn-box ">
-                    <button type="submit">
-                      Send
+                    <button type="submit" id="sendBtn">
+                      <span class="btn-text">Send</span>
+                      <span class="spinner" id="spinner"></span>
                     </button>
                   </div>
                 </div>
@@ -661,7 +616,19 @@ i:hover {
 
   
 
+<script>
+  function handleFormSubmit(form) {
+    const button = form.querySelector("#sendBtn");
+    const spinner = button.querySelector(".spinner");
+    const btnText = button.querySelector(".btn-text");
 
+    btnText.textContent = "Sending...";
+    spinner.style.display = "inline-block";
+    button.disabled = true;
+
+    return true; // Let form submit
+  }
+</script>
   
   <script src="static/js/jquery-3.4.1.min.js"></script>
   <script src="static/js/bootstrap.js"></script>

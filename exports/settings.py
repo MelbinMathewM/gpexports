@@ -74,6 +74,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'exports.wsgi.application'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'gpexports05@gmail.com'
+EMAIL_HOST_PASSWORD = 'yoxu davd tnml ceia'
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

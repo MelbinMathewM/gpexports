@@ -345,25 +345,6 @@ a:focus {
     p {
       margin-top: 25px;
     }
-
-    .btn-box {
-      display: flex;
-      margin-top: 30px;
-
-      a {
-        width: 180px;
-        text-align: center;
-        margin: 5px;
-      }
-
-      .btn-1 {
-        @include hero_btn($white, $black, 10px, 35px);
-      }
-
-      .btn-2 {
-        @include hero_btn($primary2, $white, 10px, 35px);
-      }
-    }
   }
 
   .img-box {
