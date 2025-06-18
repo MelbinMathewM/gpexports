@@ -47,15 +47,17 @@
             justify-content: center; 
         }
         .contact {
-            background-color: rgb(168, 168, 252);
+            background-color: rgb(153, 206, 250);
             border-radius: 6px;
-            padding: 20px;
+            padding: 10px;
             flex: 1;
             max-width: 400px; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
-        .contact p {
-            margin: 10px 0;
+        .icon-div{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
         }
         .map {
             flex: 1;
@@ -76,7 +78,7 @@
                 font-size: 1.2em;
             }
             .contact {
-                padding: 15px;
+                padding: 10px;
             }
             iframe {
                 height: 300px;
@@ -103,6 +105,7 @@
         .help {
             color: rgb(7, 56, 0);
             font-size: 30px;
+            margin-bottom: 5px;
             font-weight: bold;
         }
         .find{
@@ -118,12 +121,20 @@
         <div class="content">
             <div class="contact">
                 <p class="help">We're Here to Help</p>
-                <hr>
-                <i class="fa-solid fa-map-location-dot"></i><p class="find">Where to Find Us</p>
+                <div class="icon-div">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p class="find">Where to Find Us</p>
+                </div>
                 <span class="add">Cherupuzha Post Office, 79F7+VC6, Cherupuzha, Kerala 670511</span><br><br>
-                <i class="fa-solid fa-mobile-screen-button"></i><p class="find" >Give Us a Ring</p>
+                <div class="icon-div">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p class="find" >Give Us a Ring</p>
+                </div>
                 <p class="add">+91 85903 83041</p><br>
-                <i class="fa-solid fa-envelope-open"></i><p class="find" >Reach Out via Email</p>
+                <div class="icon-div">
+                    <i class="fa-solid fa-envelope-open"></i>
+                    <p class="find" >Reach Out via Email</p>
+                </div>
                 <span class="add">gpexports05@gmail.com</span>
             </div>
             <div class="map">
