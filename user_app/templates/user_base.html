@@ -219,90 +219,60 @@ i:hover {
 
   {% endblock %}
   <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_logo">
-            <a class="navbar-brand" href="index.html">
-              <span style="font-weight: 300;">
-               Sheduled Time
-              </span>  
-              <span style="font-weight: 300;">
-                And Address
-               </span>
-            </a>
-            <p>
-              Monday TO Saturday
-            </p>
-            <p>
-              Cherupuzha Post Office, 79F7+VC6, Cherupuzha, Kerala 670511
-            </p>
+  <section class="info_section py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row g-4 justify-content-between">
+
+      <!-- Scheduled Time & Address -->
+      <div class="col-12 col-md-4">
+        <div class="info_logo text-center">
+          <a class="navbar-brand mb-2 d-block" href="index.html">
+            <span style="font-weight: 500; font-size: 20px;">Scheduled Time & Address</span>
+          </a>
+          <div>
+            <p class="mb-1">Monday to Saturday</p>
+            <p class="mb-0">Cherupuzha Post Office,<br />79F7+VC6, Cherupuzha, Kerala 670511</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="info_links">
-            <h5>
-              Useful Link
-            </h5>
-            <ul>
-              <li>
-                <a href="{% url 'Home_page' %}">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="{% url 'about' %}">
-                  About
-                 
-              
-                 
-                </a>
-              </li>
-              <li>
-                <a href="{% url 'service' %}">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="{% url 'contact_us' %}">
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Contact Us
-            </h5>
-          </div>
-          <div class="info_contact">
-            <a href="" class="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Kannur,Cherupuzha
-              </span>
-            </a>
-            <a href="" class="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +91 8590383041
-              </span>
-            </a>
-            <a href="" class="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                gpexports05@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-       
       </div>
+
+      <!-- Useful Links -->
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="info_links text-center">
+          <h5 class="mb-3" style="font-weight: 500; font-size: 20px;">Useful Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Home</a></li>
+            <li><a href="/about" class="text-decoration-none">About</a></li>
+            <li><a href="/service" class="text-decoration-none">Services</a></li>
+            <li><a href="/contact_us" class="text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="info_info text-center">
+          <h5 class="mb-3" style="font-weight: 500; font-size: 20px;">Contact Us</h5>
+        </div>
+        <div class="info_contact d-flex flex-column gap-2 align-items-center">
+          <a href="#" class="text-decoration-none d-flex align-items-center gap-2">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>Kannur, Cherupuzha</span>
+          </a>
+          <a href="tel:+918590383041" class="text-decoration-none d-flex align-items-center gap-2">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>+91 8590383041</span>
+          </a>
+          <a href="mailto:gpexports05@gmail.com" class="text-decoration-none d-flex align-items-center gap-2">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>gpexports05@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- end info_section -->
 
